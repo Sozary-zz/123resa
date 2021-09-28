@@ -2183,6 +2183,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -6957,7 +6993,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#home .side-bar .blog {\n  width: 100%;\n}\n#home .side-bar p {\n  font-weight: normal;\n  font-size: 10px;\n  color: #000000;\n  line-height: normal;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  text-decoration: none;\n}\n#home .side-bar .sider-bar-round-btn {\n  padding: 0;\n  margin: 5px;\n  text-align: center;\n}\n#home .side-bar .sider-bar-round-btn li {\n  border-radius: 25px;\n  list-style-type: none;\n  padding: 10px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  border: 2px solid #000000;\n}\n#home .showcase {\n  background: linear-gradient(0deg, #dbdcbd, #eceddd);\n  font-family: verdana;\n  font-size: 22px;\n  color: #0896ff;\n  text-align: center;\n  height: 166px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#home .side-bar .blog {\n  width: 100%;\n}\n#home .side-bar .side-bar-input {\n  border: #ff7800 1px solid;\n  font-size: 10px;\n  color: #272727;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n}\n#home .side-bar .admin-access-btn {\n  font-size: 10px;\n  color: #272727;\n  border: #ff7800 1px solid;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n  cursor: pointer;\n}\n#home .side-bar p {\n  font-weight: normal;\n  font-size: 10px;\n  color: #000000;\n  line-height: normal;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  text-decoration: none;\n}\n#home .side-bar .sider-bar-round-btn {\n  padding: 0;\n  margin: 5px;\n  text-align: center;\n}\n#home .side-bar .sider-bar-round-btn li {\n  border-radius: 25px;\n  list-style-type: none;\n  padding: 10px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  border: 2px solid #000000;\n}\n#home .showcase {\n  background: linear-gradient(0deg, #dbdcbd, #eceddd);\n  font-family: verdana;\n  font-size: 22px;\n  color: #0896ff;\n  text-align: center;\n  height: 166px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39047,8 +39083,8 @@ var render = function() {
             { staticClass: "side-bar", attrs: { cols: 3 } },
             [
               _c("img", {
-                staticClass: "blog",
-                attrs: { src: "/img/home/blog.bmp" }
+                staticClass: "blog pa-3",
+                attrs: { src: "/img/home/blodg.bmp" }
               }),
               _vm._v(" "),
               _c(
@@ -39198,15 +39234,100 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "d-flex justify-center align-center" },
+                    {
+                      staticClass:
+                        "d-flex justify-center align-center flex-column"
+                    },
                     [
                       _c("p", [
                         _vm._v("Si vous "),
                         _c("strong", [
                           _vm._v("gérez un ou plusieurs hébergements :")
                         ])
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "https://www.123resa.net" } }, [
+                        _c("input", {
+                          staticClass: "admin-access-btn pa-1",
+                          attrs: {
+                            type: "button",
+                            value: "Accès Administration"
+                          }
+                        })
                       ])
                     ]
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "my-3" }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex justify-center align-center flex-column"
+                    },
+                    [
+                      _c("p", [
+                        _vm._v(
+                          "Si vous avez déjà effectué une réservation, identifiez-vous"
+                        )
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "d-flex flex-column" },
+                    [
+                      _c(
+                        "v-row",
+                        { staticClass: "align-center" },
+                        [
+                          _c("v-col", { attrs: { cols: 3 } }, [
+                            _c("p", { staticStyle: { margin: "0" } }, [
+                              _vm._v("Identifiant:")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("v-col", [
+                            _c("input", {
+                              staticClass: "side-bar-input",
+                              attrs: {
+                                name: "login_client",
+                                type: "text",
+                                size: "25"
+                              }
+                            })
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        { staticClass: "align-center" },
+                        [
+                          _c("v-col", { attrs: { cols: 3 } }, [
+                            _c("p", { staticStyle: { margin: "0" } }, [
+                              _vm._v("Mot de passe:")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("v-col", [
+                            _c("input", {
+                              staticClass: "side-bar-input",
+                              attrs: {
+                                name: "pass_client",
+                                type: "password",
+                                size: "25"
+                              }
+                            })
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
                   )
                 ],
                 1
@@ -39375,7 +39496,7 @@ var render = function() {
                               _vm._b(
                                 {
                                   attrs: {
-                                    src: "/img/" + item.id + ".svg",
+                                    src: "/img/header/" + item.id + ".svg",
                                     alt: item.label
                                   },
                                   on: {

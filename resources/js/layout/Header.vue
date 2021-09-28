@@ -12,7 +12,7 @@
           <template v-slot:activator="{ on, attrs }">
             <img
               @click="changeLanguage(item.id)"
-              :src="`/img/${item.id}.svg`"
+              :src="`/img/header/${item.id}.svg`"
               :alt="item.label"
               v-bind="attrs"
               v-on="on"

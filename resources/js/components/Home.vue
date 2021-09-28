@@ -2,7 +2,7 @@
   <div id="home">
     <v-row>
       <v-col class="side-bar" :cols="3">
-        <img src="/img/home/blog.bmp" class="blog" />
+        <img src="/img/home/blodg.bmp" class="blog pa-3" />
         <v-card color="#eceddd" elevation="0" class="pa-5"
           ><ul class="sider-bar-round-btn">
             <li>
@@ -68,8 +68,44 @@
           </p>
           <v-divider class="my-3"></v-divider>
           <img src="/img/home/hotel_discount.bmp" alt="" />
-          <div class="d-flex justify-center align-center">
+          <div class="d-flex justify-center align-center flex-column">
             <p>Si vous <strong>gérez un ou plusieurs hébergements :</strong></p>
+            <a href="https://www.123resa.net">
+              <input
+                type="button"
+                value="Accès Administration"
+                class="admin-access-btn pa-1"
+              />
+            </a>
+          </div>
+          <v-divider class="my-3"></v-divider>
+          <div class="d-flex justify-center align-center flex-column">
+            <p>Si vous avez déjà effectué une réservation, identifiez-vous</p>
+          </div>
+          <div class="d-flex flex-column">
+            <v-row class="align-center">
+              <v-col :cols="3">
+                <p style="margin: 0">Identifiant:</p>
+              </v-col>
+              <v-col>
+                <input
+                  name="login_client"
+                  type="text"
+                  class="side-bar-input"
+                  size="25"
+                />
+              </v-col>
+            </v-row>
+            <v-row class="align-center">
+              <v-col :cols="3"> <p style="margin: 0">Mot de passe:</p></v-col>
+              <v-col>
+                <input
+                  name="pass_client"
+                  type="password"
+                  class="side-bar-input"
+                  size="25"
+              /></v-col>
+            </v-row>
           </div>
         </v-card>
       </v-col>
@@ -96,6 +132,21 @@ export default {};
   .side-bar {
     .blog {
       width: 100%;
+    }
+    .side-bar-input {
+      border: #ff7800 1px solid;
+      font-size: 10px;
+      color: #272727;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      background-color: #dbdcbd;
+    }
+    .admin-access-btn {
+      font-size: 10px;
+      color: #272727;
+      border: #ff7800 1px solid;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      background-color: #dbdcbd;
+      cursor: pointer;
     }
     p {
       font-weight: normal;
