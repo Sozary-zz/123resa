@@ -2219,6 +2219,95 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -6993,7 +7082,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#home .side-bar .blog {\n  width: 100%;\n}\n#home .side-bar .side-bar-input {\n  border: #ff7800 1px solid;\n  font-size: 10px;\n  color: #272727;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n}\n#home .side-bar .admin-access-btn {\n  font-size: 10px;\n  color: #272727;\n  border: #ff7800 1px solid;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n  cursor: pointer;\n}\n#home .side-bar p {\n  font-weight: normal;\n  font-size: 10px;\n  color: #000000;\n  line-height: normal;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  text-decoration: none;\n}\n#home .side-bar .sider-bar-round-btn {\n  padding: 0;\n  margin: 5px;\n  text-align: center;\n}\n#home .side-bar .sider-bar-round-btn li {\n  border-radius: 25px;\n  list-style-type: none;\n  padding: 10px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  border: 2px solid #000000;\n}\n#home .showcase {\n  background: linear-gradient(0deg, #dbdcbd, #eceddd);\n  font-family: verdana;\n  font-size: 22px;\n  color: #0896ff;\n  text-align: center;\n  height: 166px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#home .side-bar .blog {\n  width: 100%;\n  border-radius: 15px;\n}\n#home .side-bar .side-bar-input {\n  border: #ff7800 1px solid;\n  font-size: 10px;\n  color: #272727;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n}\n#home .side-bar .side-bar-btn {\n  font-size: 10px;\n  color: #272727;\n  border: #ff7800 1px solid;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n  cursor: pointer;\n}\n#home .side-bar .admin-access-btn {\n  font-size: 10px;\n  color: #272727;\n  border: #ff7800 1px solid;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n  cursor: pointer;\n}\n#home .side-bar p {\n  font-weight: normal;\n  font-size: 10px;\n  color: #000000;\n  line-height: normal;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  text-decoration: none;\n}\n#home .side-bar .sider-bar-round-btn {\n  padding: 0;\n  margin: 5px;\n  text-align: center;\n}\n#home .side-bar .sider-bar-round-btn li {\n  border-radius: 25px;\n  list-style-type: none;\n  padding: 10px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  border: 2px solid #000000;\n}\n#home .search-zone .zones {\n  list-style: none;\n}\n#home .search-zone .zones li {\n  border: 1px solid #cdceb9;\n  box-shadow: 0px 3px 4px -2px #848471;\n  padding: 5px;\n  display: inline;\n  margin-right: 20px;\n  background: #dcddbe;\n  cursor: pointer;\n  color: #f68e29;\n}\n#home .showcase {\n  background: linear-gradient(0deg, #dbdcbd, #eceddd);\n  font-family: verdana;\n  font-size: 22px;\n  color: #0896ff;\n  text-align: center;\n  height: 166px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39084,7 +39173,7 @@ var render = function() {
             [
               _c("img", {
                 staticClass: "blog pa-3",
-                attrs: { src: "/img/home/blodg.bmp" }
+                attrs: { src: "/img/home/blog.bmp" }
               }),
               _vm._v(" "),
               _c(
@@ -39152,8 +39241,8 @@ var render = function() {
                     _c("img", {
                       attrs: {
                         src: "/img/home/tourisme.gif",
-                        width: "5",
-                        height: "5"
+                        width: "9",
+                        height: "9"
                       }
                     }),
                     _vm._v(" "),
@@ -39325,10 +39414,174 @@ var render = function() {
                           ])
                         ],
                         1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "d-flex align-center justify-center my-3"
+                        },
+                        [
+                          _c("input", {
+                            staticClass: "side-bar-btn pa-1",
+                            attrs: {
+                              name: "Submit_client",
+                              type: "submit",
+                              value: "Connexion"
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("strong", [_vm._v("Oubli")]),
+                        _vm._v(
+                          " de votre mot de passe, Recevez votre mot de\n            passe par email.\n          "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        { staticClass: "align-center" },
+                        [
+                          _c("v-col", { attrs: { cols: 3 } }, [
+                            _c("p", { staticStyle: { margin: "0" } }, [
+                              _vm._v("Email:")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("v-col", [
+                            _c("input", {
+                              staticClass: "side-bar-input",
+                              attrs: {
+                                name: "email_pass",
+                                type: "text",
+                                size: "25"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("v-col", [
+                            _c("input", {
+                              staticClass: "side-bar-btn pa-1",
+                              attrs: {
+                                name: "Submit_envoi",
+                                type: "submit",
+                                value: "Envoi"
+                              }
+                            })
+                          ])
+                        ],
+                        1
                       )
                     ],
                     1
-                  )
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "my-3" }),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: {
+                      src: "/img/home/hotel_dernieres_minutes.bmp",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      attrs: {
+                        src: "/img/home/reservation_hotel.gif",
+                        width: "5",
+                        height: "5"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("strong", [_vm._v(" Saisissez votre email ")]),
+                    _vm._v(
+                      " pour être informé des\n          nouveautés du site.\n        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex align-center justify-center flex-column"
+                    },
+                    [
+                      _c("input", {
+                        staticClass: "side-bar-input pa-1 mb-2",
+                        attrs: {
+                          name: "emailnewsletter",
+                          value: "Votre email",
+                          type: "text",
+                          size: "25"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "side-bar-btn pa-1",
+                        attrs: { name: "go", type: "submit", value: "Go" }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "my-3" }),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: { src: "/img/home/resa_on_line.bmp", alt: "" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n          Notre société s'engage à vous fournir un service de qualité. Vous\n          pouvez utiliser notre système de réservation simple et efficace, en\n          toute sécurité. Nous mettons à votre disposition nos conseillères\n          disponible par e-mail : "
+                    ),
+                    _c("strong", [_vm._v("contact@123resa.net")])
+                  ]),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "my-3" }),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: { src: "/img/home/promos_sejour.bmp", alt: "" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v("Vous pouvez consultez nos "),
+                    _c("strong", [_vm._v("FAQ")]),
+                    _vm._v(" ,")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      attrs: {
+                        src: "/img/home/tourisme.gif",
+                        width: "9",
+                        height: "9"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Cliquez ici!")])
+                  ]),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "my-3" }),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v("\n          Spécialiste de la\n          "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "http://vacances.seloger.com/",
+                          target: "_blank",
+                          title: "location de vacances avec Seloger.com"
+                        }
+                      },
+                      [_vm._v("location vacances")]
+                    ),
+                    _vm._v(
+                      ", seloger.com vous propose de nombreuses formules de séjour sur\n          vacances.seloger.com.\n        "
+                    )
+                  ])
                 ],
                 1
               )
@@ -39336,27 +39589,58 @@ var render = function() {
             1
           ),
           _vm._v(" "),
-          _c("v-col", { staticClass: "home-container", attrs: { cols: 9 } }, [
-            _c(
-              "div",
-              { staticClass: "showcase d-flex justify-center align-center" },
-              [
-                _c("p", [
-                  _vm._v("\n          123RESA vous propose "),
-                  _c("strong", [_vm._v("les meilleures offres")]),
+          _c(
+            "v-col",
+            { staticClass: "home-container", attrs: { cols: 9 } },
+            [
+              _c(
+                "div",
+                { staticClass: "showcase d-flex justify-center align-center" },
+                [
+                  _c("p", [
+                    _vm._v("\n          123RESA vous propose "),
+                    _c("strong", [_vm._v("les meilleures offres")]),
+                    _vm._v(" "),
+                    _c("br"),
+                    _vm._v(
+                      "\n          de + de 850 000 hôtels et appartements dans le monde entier. "
+                    ),
+                    _c("br"),
+                    _vm._v(
+                      "\n          Pour bénéficier des meilleurs tarifs, utilisez le moteur ci dessous\n          !\n        "
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                {
+                  staticClass: "search-zone pa-3 mt-5",
+                  attrs: { color: "#e4e5cd" }
+                },
+                [
+                  _c("ul", { staticClass: "zones" }, [
+                    _c("li", [_vm._v("Les villes principales")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Les zones touristiques")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Les aéroports")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Les gares")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Les attractions")])
+                  ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(
-                    "\n          de + de 850 000 hôtels et appartements dans le monde entier. "
-                  ),
-                  _c("br"),
-                  _vm._v(
-                    "\n          Pour bénéficier des meilleurs tarifs, utilisez le moteur ci dessous\n          !\n        "
-                  )
-                ])
-              ]
-            )
-          ])
+                  _c("v-divider", { staticClass: "my-4" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "results d-flex flex-column" })
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       )

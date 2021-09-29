@@ -2,7 +2,7 @@
   <div id="home">
     <v-row>
       <v-col class="side-bar" :cols="3">
-        <img src="/img/home/blodg.bmp" class="blog pa-3" />
+        <img src="/img/home/blog.bmp" class="blog pa-3" />
         <v-card color="#eceddd" elevation="0" class="pa-5"
           ><ul class="sider-bar-round-btn">
             <li>
@@ -32,7 +32,7 @@
             </strong>
           </p>
           <p>
-            <img src="/img/home/tourisme.gif" width="5" height="5" />
+            <img src="/img/home/tourisme.gif" width="9" height="9" />
             <a href="#">Cliquez ici!</a>
           </p>
           <img src="/img/home/infos_hoteliere.bmp" alt="" />
@@ -106,7 +106,85 @@
                   size="25"
               /></v-col>
             </v-row>
+            <div class="d-flex align-center justify-center my-3">
+              <input
+                name="Submit_client"
+                type="submit"
+                class="side-bar-btn pa-1"
+                value="Connexion"
+              />
+            </div>
+            <p>
+              <strong>Oubli</strong> de votre mot de passe, Recevez votre mot de
+              passe par email.
+            </p>
+            <v-row class="align-center">
+              <v-col :cols="3"> <p style="margin: 0">Email:</p></v-col>
+              <v-col>
+                <input
+                  name="email_pass"
+                  type="text"
+                  class="side-bar-input"
+                  size="25"
+              /></v-col>
+              <v-col>
+                <input
+                  name="Submit_envoi"
+                  type="submit"
+                  class="side-bar-btn pa-1"
+                  value="Envoi"
+                />
+              </v-col>
+            </v-row>
           </div>
+          <v-divider class="my-3"></v-divider>
+          <img src="/img/home/hotel_dernieres_minutes.bmp" alt="" />
+          <p>
+            <img src="/img/home/reservation_hotel.gif" width="5" height="5" />
+            <strong> Saisissez votre email </strong> pour être informé des
+            nouveautés du site.
+          </p>
+          <div class="d-flex align-center justify-center flex-column">
+            <input
+              name="emailnewsletter"
+              value="Votre email"
+              type="text"
+              class="side-bar-input pa-1 mb-2"
+              size="25"
+            />
+            <input
+              name="go"
+              type="submit"
+              class="side-bar-btn pa-1"
+              value="Go"
+            />
+          </div>
+          <v-divider class="my-3"></v-divider>
+          <img src="/img/home/resa_on_line.bmp" alt="" />
+          <p>
+            Notre société s'engage à vous fournir un service de qualité. Vous
+            pouvez utiliser notre système de réservation simple et efficace, en
+            toute sécurité. Nous mettons à votre disposition nos conseillères
+            disponible par e-mail : <strong>contact@123resa.net</strong>
+          </p>
+          <v-divider class="my-3"></v-divider>
+          <img src="/img/home/promos_sejour.bmp" alt="" />
+          <p>Vous pouvez consultez nos <strong>FAQ</strong> ,</p>
+          <p>
+            <img src="/img/home/tourisme.gif" width="9" height="9" />
+            <a href="#">Cliquez ici!</a>
+          </p>
+          <v-divider class="my-3"></v-divider>
+          <p>
+            Spécialiste de la
+            <a
+              href="http://vacances.seloger.com/"
+              target="_blank"
+              title="location de vacances avec Seloger.com"
+              >location vacances</a
+            >, seloger.com vous propose de nombreuses formules de séjour sur
+            vacances.seloger.com.
+          </p>
         </v-card>
       </v-col>
       <v-col class="home-container" :cols="9"
@@ -117,8 +195,19 @@
             Pour bénéficier des meilleurs tarifs, utilisez le moteur ci dessous
             !
           </p>
-        </div></v-col
-      >
+        </div>
+        <v-card color="#e4e5cd" class="search-zone pa-3 mt-5">
+          <ul class="zones">
+            <li>Les villes principales</li>
+            <li>Les zones touristiques</li>
+            <li>Les aéroports</li>
+            <li>Les gares</li>
+            <li>Les attractions</li>
+          </ul>
+          <v-divider class="my-4"></v-divider>
+          <div class="results d-flex flex-column"></div>
+        </v-card>
+      </v-col>
     </v-row>
   </div>
 </template>
@@ -132,6 +221,7 @@ export default {};
   .side-bar {
     .blog {
       width: 100%;
+      border-radius: 15px;
     }
     .side-bar-input {
       border: #ff7800 1px solid;
@@ -139,6 +229,14 @@ export default {};
       color: #272727;
       font-family: Verdana, Arial, Helvetica, sans-serif;
       background-color: #dbdcbd;
+    }
+    .side-bar-btn {
+      font-size: 10px;
+      color: #272727;
+      border: #ff7800 1px solid;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      background-color: #dbdcbd;
+      cursor: pointer;
     }
     .admin-access-btn {
       font-size: 10px;
@@ -168,6 +266,21 @@ export default {};
         margin-bottom: 5px;
         margin-top: 0px;
         border: 2px solid #000000;
+      }
+    }
+  }
+  .search-zone {
+    .zones {
+      list-style: none;
+      li {
+        border: 1px solid #cdceb9;
+        box-shadow: 0px 3px 4px -2px #848471;
+        padding: 5px;
+        display: inline;
+        margin-right: 20px;
+        background: #dcddbe;
+        cursor: pointer;
+        color: #f68e29;
       }
     }
   }
