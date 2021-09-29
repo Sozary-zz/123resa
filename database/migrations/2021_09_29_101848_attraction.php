@@ -40,6 +40,6 @@ class Attraction extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('attraction');
     }
 }

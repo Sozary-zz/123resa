@@ -2318,6 +2318,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2344,6 +2349,9 @@ __webpack_require__.r(__webpack_exports__);
         localStorage.setItem("search-zone", JSON.stringify(searchZone));
       }
     }
+  },
+  mounted: function mounted() {
+    this.loadSearchZone("ville");
   },
   methods: {
     zoneInCache: function zoneInCache() {
@@ -7139,7 +7147,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#home .side-bar .blog {\n  width: 100%;\n  border-radius: 15px;\n}\n#home .side-bar .side-bar-input {\n  border: #ff7800 1px solid;\n  font-size: 10px;\n  color: #272727;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n}\n#home .side-bar .side-bar-btn {\n  font-size: 10px;\n  color: #272727;\n  border: #ff7800 1px solid;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n  cursor: pointer;\n}\n#home .side-bar .admin-access-btn {\n  font-size: 10px;\n  color: #272727;\n  border: #ff7800 1px solid;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n  cursor: pointer;\n}\n#home .side-bar p {\n  font-weight: normal;\n  font-size: 10px;\n  color: #000000;\n  line-height: normal;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  text-decoration: none;\n}\n#home .side-bar .sider-bar-round-btn {\n  padding: 0;\n  margin: 5px;\n  text-align: center;\n}\n#home .side-bar .sider-bar-round-btn li {\n  border-radius: 25px;\n  list-style-type: none;\n  padding: 10px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  border: 2px solid #000000;\n}\n#home .search-zone .zones {\n  list-style: none;\n}\n#home .search-zone .zones li {\n  border: 1px solid #cdceb9;\n  box-shadow: 0px 3px 4px -2px #848471;\n  padding: 5px;\n  display: inline;\n  margin-right: 20px;\n  background: #dcddbe;\n  cursor: pointer;\n  color: #f68e29;\n}\n#home .results {\n  max-height: 355px;\n}\n#home .showcase {\n  background: linear-gradient(0deg, #dbdcbd, #eceddd);\n  font-family: verdana;\n  font-size: 22px;\n  color: #0896ff;\n  text-align: center;\n  height: 166px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#home .side-bar .blog {\n  width: 100%;\n  border-radius: 15px;\n}\n#home .side-bar .side-bar-input {\n  border: #ff7800 1px solid;\n  font-size: 10px;\n  color: #272727;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n}\n#home .side-bar .side-bar-btn {\n  font-size: 10px;\n  color: #272727;\n  border: #ff7800 1px solid;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n  cursor: pointer;\n}\n#home .side-bar .admin-access-btn {\n  font-size: 10px;\n  color: #272727;\n  border: #ff7800 1px solid;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  background-color: #dbdcbd;\n  cursor: pointer;\n}\n#home .side-bar p {\n  font-weight: normal;\n  font-size: 10px;\n  color: #000000;\n  line-height: normal;\n  font-family: Verdana, Arial, Helvetica, sans-serif;\n  text-decoration: none;\n}\n#home .side-bar .sider-bar-round-btn {\n  padding: 0;\n  margin: 5px;\n  text-align: center;\n}\n#home .side-bar .sider-bar-round-btn li {\n  border-radius: 25px;\n  list-style-type: none;\n  padding: 10px;\n  margin-bottom: 5px;\n  margin-top: 0px;\n  border: 2px solid #000000;\n}\n#home .home-container {\n  padding: 20px;\n}\n#home .home-container .search-zone .zones {\n  list-style: none;\n}\n#home .home-container .search-zone .zones li {\n  border: 1px solid #cdceb9;\n  box-shadow: 0px 3px 4px -2px #848471;\n  padding: 5px;\n  display: inline;\n  margin-right: 20px;\n  background: #dcddbe;\n  cursor: pointer;\n  color: #f68e29;\n}\n#home .home-container .results {\n  max-height: 355px;\n}\n#home .home-container .showcase {\n  background: linear-gradient(0deg, #dbdcbd, #eceddd);\n  font-family: verdana;\n  font-size: 22px;\n  color: #0896ff;\n  text-align: center;\n  height: 166px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39678,9 +39686,29 @@ var render = function() {
                 },
                 [
                   _c("ul", { staticClass: "zones" }, [
-                    _c("li", [_vm._v("Les villes principales")]),
+                    _c(
+                      "li",
+                      {
+                        on: {
+                          click: function($event) {
+                            return _vm.loadSearchZone("ville")
+                          }
+                        }
+                      },
+                      [_vm._v("Les villes principales")]
+                    ),
                     _vm._v(" "),
-                    _c("li", [_vm._v("Les zones touristiques")]),
+                    _c(
+                      "li",
+                      {
+                        on: {
+                          click: function($event) {
+                            return _vm.loadSearchZone("zone")
+                          }
+                        }
+                      },
+                      [_vm._v("Les zones touristiques")]
+                    ),
                     _vm._v(" "),
                     _c(
                       "li",
@@ -39722,30 +39750,48 @@ var render = function() {
                   _c("v-divider", { staticClass: "my-4" }),
                   _vm._v(" "),
                   _c(
-                    "v-card",
-                    {
-                      staticClass: "results d-flex flex-column flex-wrap",
-                      attrs: {
-                        color: "transparent",
-                        elevation: "0",
-                        loading: _vm.loadingSearchZone
-                      }
-                    },
-                    _vm._l(_vm.searchItems, function(item, index) {
-                      return _c("div", { key: index }, [
-                        _c("img", {
-                          attrs: {
-                            src: "/img/home/reservation_hotel.gif",
-                            width: "5",
-                            height: "5"
-                          }
-                        }),
-                        _vm._v(
-                          "\n            " + _vm._s(item.nom) + "\n          "
+                    "div",
+                    { staticClass: "results d-flex flex-column flex-wrap" },
+                    [
+                      _vm.loadingSearchZone
+                        ? _c("v-progress-circular", {
+                            staticStyle: { width: "inherit" },
+                            attrs: { indeterminate: "", color: "primary" }
+                          })
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm._l(_vm.searchItems, function(item, index) {
+                        return _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: !_vm.loadingSearchZone,
+                                expression: "!loadingSearchZone"
+                              }
+                            ],
+                            key: index
+                          },
+                          [
+                            _c("img", {
+                              attrs: {
+                                src: "/img/home/reservation_hotel.gif",
+                                width: "5",
+                                height: "5"
+                              }
+                            }),
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(item.nom) +
+                                "\n          "
+                            )
+                          ]
                         )
-                      ])
-                    }),
-                    0
+                      })
+                    ],
+                    2
                   )
                 ],
                 1

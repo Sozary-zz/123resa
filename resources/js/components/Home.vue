@@ -198,24 +198,29 @@
         </div>
         <v-card color="#e4e5cd" class="search-zone pa-3 mt-5">
           <ul class="zones">
-            <li>Les villes principales</li>
-            <li>Les zones touristiques</li>
+            <li @click="loadSearchZone('ville')">Les villes principales</li>
+            <li @click="loadSearchZone('zone')">Les zones touristiques</li>
             <li @click="loadSearchZone('airport')">Les aéroports</li>
             <li @click="loadSearchZone('station')">Les gares</li>
             <li @click="loadSearchZone('attraction')">Les attractions</li>
           </ul>
           <v-divider class="my-4"></v-divider>
-          <v-card
-            class="results d-flex flex-column flex-wrap"
-            color="transparent"
-            elevation="0"
-            :loading="loadingSearchZone"
-          >
-            <div v-for="(item, index) of searchItems" :key="index">
+          <div class="results d-flex flex-column flex-wrap">
+            <v-progress-circular
+              style="width: inherit"
+              indeterminate
+              v-if="loadingSearchZone"
+              color="primary"
+            ></v-progress-circular>
+            <div
+              v-for="(item, index) of searchItems"
+              :key="index"
+              v-show="!loadingSearchZone"
+            >
               <img src="/img/home/reservation_hotel.gif" width="5" height="5" />
               {{ item.nom }}
             </div>
-          </v-card>
+          </div>
         </v-card>
       </v-col>
     </v-row>
@@ -251,6 +256,9 @@ export default {
         localStorage.setItem("search-zone", JSON.stringify(searchZone));
       },
     },
+  },
+  mounted() {
+    this.loadSearchZone("ville");
   },
   methods: {
     zoneInCache() {
@@ -327,35 +335,38 @@ export default {
       }
     }
   }
-  .search-zone {
-    .zones {
-      list-style: none;
-      li {
-        border: 1px solid #cdceb9;
-        box-shadow: 0px 3px 4px -2px #848471;
-        padding: 5px;
-        display: inline;
-        margin-right: 20px;
-        background: #dcddbe;
-        cursor: pointer;
-        color: #f68e29;
+  .home-container {
+    padding: 20px;
+    .search-zone {
+      .zones {
+        list-style: none;
+        li {
+          border: 1px solid #cdceb9;
+          box-shadow: 0px 3px 4px -2px #848471;
+          padding: 5px;
+          display: inline;
+          margin-right: 20px;
+          background: #dcddbe;
+          cursor: pointer;
+          color: #f68e29;
+        }
       }
     }
-  }
-  .results {
-    max-height: 355px;
-  }
-  .showcase {
-    background: linear-gradient(
-      0deg,
-      rgba(219, 220, 189, 1),
-      rgba(236, 237, 221, 1)
-    );
-    font-family: verdana;
-    font-size: 22px;
-    color: #0896ff;
-    text-align: center;
-    height: $showcase-height;
+    .results {
+      max-height: 355px;
+    }
+    .showcase {
+      background: linear-gradient(
+        0deg,
+        rgba(219, 220, 189, 1),
+        rgba(236, 237, 221, 1)
+      );
+      font-family: verdana;
+      font-size: 22px;
+      color: #0896ff;
+      text-align: center;
+      height: $showcase-height;
+    }
   }
 }
 </style>
