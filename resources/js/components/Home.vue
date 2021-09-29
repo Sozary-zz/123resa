@@ -200,12 +200,22 @@
           <ul class="zones">
             <li>Les villes principales</li>
             <li>Les zones touristiques</li>
-            <li>Les aéroports</li>
-            <li>Les gares</li>
-            <li>Les attractions</li>
+            <li @click="loadSearchZone('airport')">Les aéroports</li>
+            <li @click="loadSearchZone('station')">Les gares</li>
+            <li @click="loadSearchZone('attraction')">Les attractions</li>
           </ul>
           <v-divider class="my-4"></v-divider>
-          <div class="results d-flex flex-column"></div>
+          <v-card
+            class="results d-flex flex-column flex-wrap"
+            color="transparent"
+            elevation="0"
+            :loading="loadingSearchZone"
+          >
+            <div v-for="(item, index) of searchItems" :key="index">
+              <img src="/img/home/reservation_hotel.gif" width="5" height="5" />
+              {{ item.nom }}
+            </div>
+          </v-card>
         </v-card>
       </v-col>
     </v-row>
@@ -213,7 +223,55 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      searchZoneType: null,
+      searchKey: 0,
+      loadingSearchZone: false,
+    };
+  },
+  computed: {
+    searchItems: {
+      get() {
+        this.searchKey;
+        const searchZone = JSON.parse(
+          localStorage.getItem("search-zone") || "{}"
+        );
+        if (this.searchZoneType in searchZone) {
+          return searchZone[this.searchZoneType];
+        }
+        return [];
+      },
+      set(val) {
+        let searchZone = JSON.parse(
+          localStorage.getItem("search-zone") || "{}"
+        );
+        searchZone[this.searchZoneType] = val;
+        localStorage.setItem("search-zone", JSON.stringify(searchZone));
+      },
+    },
+  },
+  methods: {
+    zoneInCache() {
+      const searchZone = JSON.parse(
+        localStorage.getItem("search-zone") || "{}"
+      );
+      return this.searchZoneType in searchZone;
+    },
+    loadSearchZone(type) {
+      this.searchZoneType = type;
+      if (!this.zoneInCache()) {
+        this.loadingSearchZone = true;
+        axios.get("/recherche-zone-ville/" + type).then((response) => {
+          this.searchItems = response.data;
+          this.searchKey++;
+          this.loadingSearchZone = false;
+        });
+      }
+    },
+  },
+};
 </script>
 <style lang="scss">
 @import "./../../sass/variables.scss";
@@ -283,6 +341,9 @@ export default {};
         color: #f68e29;
       }
     }
+  }
+  .results {
+    max-height: 355px;
   }
   .showcase {
     background: linear-gradient(
